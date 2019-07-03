@@ -7,7 +7,7 @@ module.exports = class MessageEvent {
     async ON() {
         const status = (this.client.music.module.queue.get(process.env.guildID) && this.client.music.module.queue.get(process.env.guildID).songPlaying
             ? `Tocando Agora: ${this.client.music.module.queue.get(process.env.guildID).songPlaying.name}`
-            : 'No momento não á nada tocando'
+            : '🎵 Entretendo todos com minhas músicas!'
         )
         return this.client.user.setPresence({
             activity: {

@@ -14,21 +14,19 @@ module.exports = class Skip extends Command {
             const embed = new ClientEmbed(author);
             const guildQueue = await this.client.music.module.queue.get(guild.id);
             if (guildQueue && guildQueue.songs.length) {
-                return message.react('⏩').then(() => guildQueue.skip());
+                return message.react('595288377730007040').then(() => guildQueue.skip());
             } else {
                 if (guildQueue) {
                     return channel.send(embed
                         .setTitle('<:error:538505640889417752> - Não há nenhuma música depois dessa!')
-                        .setTimestamp()
                         .setColor(process.env.ERR_COLOR)
-                        .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                        .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                     )
                 } else {
                     return channel.send(embed
                         .setTitle('<:error:538505640889417752> - No **momento** não estou tocando nada!')
                         .setColor(process.env.ERR_COLOR)
-                        .setTimestamp()
-                        .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                        .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                     )
                 }
             }

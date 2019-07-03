@@ -38,8 +38,7 @@ module.exports = class SearchSong extends Command {
                 if (song) {
                     return channel.send(embed
                         .addField('<a:music:512400492836683791> - Nome da Música', `[${song.name}](${song.url})`)
-                        .setTimestamp()
-                        .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                        .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                         .addField('🌀 - Adicionado Por', song.addedBy.toString(), true)
                         .addField('<:playl:538536887502110730> - Posição na Queue', ([guildQueue.songPlaying].indexOf(song) != -1
                             ? '**<a:music:512400492836683791> - Tocando Agora**'
@@ -48,21 +47,18 @@ module.exports = class SearchSong extends Command {
                         .addField('<:youtube:514806812143517725> - Canal Postado', `**${song.channelOwner}**`)
                         .addField('<:calendar:516018350665629715> - Data de Postagem', `**${moment(song.publishedAt).format('LLLL')}**`)
                         .setThumbnail(song.thumbnail.url)
-                        .setTimestamp()
-                        .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                        .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                     )
                 } else {
                     return channel.send(embed
                         .setTitle('<:error:538505640889417752> - Não consegui encontrar nenhuma **música** com este nome!')
-                        .setTimestamp()
-                        .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                        .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                     )
                 }
             } else {
                 return channel.send(embed
                     .setTitle('<:error:538505640889417752> - Insira o **NOME** ou o **NÚMERO** da música que você deseja obter!')
-                    .setTimestamp()
-                    .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                    .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                 )
             }
         } else {
@@ -70,7 +66,7 @@ module.exports = class SearchSong extends Command {
                 .setTitle('<:error:538505640889417752> - No **momento** não estou tocando nada!')
                 .setColor(process.env.ERR_COLOR)
                 .setTimestamp()
-                .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
             )
         }
     }

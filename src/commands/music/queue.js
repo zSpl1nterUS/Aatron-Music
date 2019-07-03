@@ -14,8 +14,7 @@ module.exports = class Queue extends Command {
         if (guildQueue && guildQueue.songPlaying) {
             return channel.send(embed
                 .setTitle(`<:playl:538536887502110730> - Lista de Reprodução - **${guild.name}**`)
-                .setTimestamp()
-                .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                 .setDescription(
                     [`<:clock:595048298918838272> - Tempo estimado de Reprodução: **\`[${guildQueue.queueFullDuration}]\`**`,
                     `<:loop:595047906583511041> - Loop: **\`${guildQueue.loop ? 'Ativado' : 'Desativado'}\`**`,
@@ -33,8 +32,7 @@ module.exports = class Queue extends Command {
             return channel.send(embed
                 .setTitle('<:error:538505640889417752> - No **momento** não estou tocando nada!')
                 .setColor(process.env.ERR_COLOR)
-                .setTimestamp()
-                .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
             )
         }
     }

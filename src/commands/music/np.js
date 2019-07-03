@@ -33,8 +33,7 @@ module.exports = class Nowplaying extends Command {
         } else {
             return channel.send(embed
                 .setTitle('<:error:538505640889417752> - No **momento** não estou tocando nada')
-                .setTimestamp()
-                .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                 .setColor(process.env.ERR_COLOR)
             )
         }

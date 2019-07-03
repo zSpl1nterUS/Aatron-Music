@@ -16,15 +16,13 @@ module.exports = class Reset extends Command {
             if (guildQueue && guildQueue.songPlaying) {
                 return channel.send(embed
                     .setTitle('<:okay:538503952900161538> - Queue reseta com sucesso!')
-                    .setTimestamp()
-                    .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                    .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                 ).then(() => guildQueue.resetQueue())
             } else {
                 return channel.send(embed
                     .setTitle('<:error:538505640889417752> - No **momento** não estou tocando nada!')
                     .setColor(process.env.ERR_COLOR)
-                    .setTimestamp()
-                    .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                    .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                 )
             }
         }

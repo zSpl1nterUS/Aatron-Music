@@ -19,23 +19,20 @@ module.exports = class Jump extends Command {
                     if (!(!isNaN(Number(args[0])))) return channel.send(embed
                         .setTitle(`<:error:538505640889417752> - Você deve inserir um número de **1** á** ${guildQueue.songs.length}**`)
                         .setColor(process.env.ERR_COLOR)
-                        .setTimestamp()
-                        .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                        .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                     );
                     jump = Math.round(jump);
                     if (jump > guildQueue.songs.length || jump < 1) return channel.send(embed
                         .setTitle(`<:error:538505640889417752> - Você deve inserir um número de **1** á**${guildQueue.songs.length}**!`)
                         .setColor(process.env.ERR_COLOR)
-                        .setTimestamp()
-                        .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                        .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                     );
                     return message.react('512392301037748251').then(() => guildQueue.jump(jump));
                 } else {
                     return channel.send(embed
                         .setTitle(`<:error:538505640889417752> - Insira um número de músicas para eu pular: **[1 á ${guildQueue.songs.length}]**`)
                         .setColor(process.env.ERR_COLOR)
-                        .setTimestamp()
-                        .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                        .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                     )
                 }
             } else {
@@ -43,15 +40,14 @@ module.exports = class Jump extends Command {
                     return channel.send(embed
                         .setTitle('<:error:538505640889417752> - Não á outra música depois dessa!')
                         .setColor(process.env.ERR_COLOR)
-                        .setTimestamp()
-                        .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                        .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                     )
                 } else {
                     return channel.send(embed
                         .setTitle('<:error:538505640889417752> - No **momento** não estou tocando nada!')
                         .setColor(process.env.ERR_COLOR)
-                        .setTimestamp()
-                        .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+
+                        .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                     )
                 }
             }

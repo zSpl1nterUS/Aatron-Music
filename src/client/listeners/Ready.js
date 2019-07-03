@@ -7,9 +7,9 @@ module.exports = class MessageEvent {
     async ON() {
         return this.client.user.setPresence({
             activity: {
-                name: 'Sendo Desenvolvido!',
-                name: 'Logo estarei pronto',
-                name: 'Serei um bot zika!'
+                name: 'Ainda estou em fase Beta!',
+                name: 'O que acha de me convidar para seu servidor?',
+                name: 'Fui criado com o intuito de levar música a todos os servidores'
             },
             status: 'idle',
             status: 'online',

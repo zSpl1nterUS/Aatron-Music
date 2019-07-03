@@ -37,8 +37,7 @@ module.exports = class Play extends Command {
                         return channel.send(embed
                             .setTitle('<:error:538505640889417752> - Erro encontrado')
                             .setDescription(err.message)
-                            .setTimestamp()
-                            .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                            .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                             .setColor(process.env.ERR_COLOR)
                         )
                     }
@@ -46,8 +45,7 @@ module.exports = class Play extends Command {
                     return channel.send(embed
                         .setTitle('<:error:538505640889417752> - Erro encontrado no comando!')
                         .setDescription(`${at}, não consegui encontrar nenhum **resultado** para música desejada, verifique o **NOME** ou o **LINK** e tente novamente!`)
-                        .setTimestamp()
-                        .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                        .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                         .setColor(process.env.ERR_COLOR)
                     )
                 }
@@ -55,8 +53,7 @@ module.exports = class Play extends Command {
                 return channel.send(embed
                     .setTitle('<:error:538505640889417752> - Erro encontrado!')
                     .setDescription(`${at}, você deve inserir o **NOME** ou **LINK** desejado \`(YouTube)\``)
-                    .setTimestamp()
-                    .setFooter(`Aatron Music - 2019`, message.client.user.displayAvatarURL)
+                    .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                     .setColor(process.env.ERR_COLOR)
                 )
             }
@@ -70,13 +67,13 @@ module.exports = class Play extends Command {
             return c ? e.setColor(process.env.ERR_COLOR) : e;
         }
 
-        queue.on('stop', (u, l) => l || send(embed(u, '<:okay:538503952900161538> - A **list** de reprodução acabou', true)));
-        queue.on('start', (s) => send(embed(s.addedBy, `<a:music:512400492836683791> - Começando a tocar: **[${s.name}](${s.url})** \`[${s.durationContent}]\``)).then((m) => queue.setLastMesage(m)));
+        queue.on('stop', (u, l) => l || send(embed(u, '<:okay:538503952900161538> - A **lista** de reprodução acabou', true)));
+        queue.on('start', (s) => send(embed(s.addedBy, `<a:music:512400492836683791> - Começando a **tocar**: **[${s.name}](${s.url})** \`[${s.durationContent}]\``)).then((m) => queue.setLastMesage(m)));
         queue.on('error', (s) => send(embed(s.addedBy, `<:error:538505640889417752> - Ocorreu um erro ao tentar reproduzir a música: **[${s.name}](${s.url})**`, true)));
         queue.on('queue', (s, u) => {
-            if (s.length > 1) send(embed(u, `<:playl:538536887502110730> - Adicionei a música: **${s.length}** na queue!`));
+            if (s.length > 1) send(embed(u, `<:playl:538536887502110730> - Adicionei **${s.length}** **MÚSICAS** na queue!`));
             else {
-                send(embed(u, `<:playl:538536887502110730> - Adicionei a música **[${s[0].name}](${s[0].url})** na queue!`)).then(m => m.delete({ timeout: 20000 }));
+                send(embed(u, `<:playl:538536887502110730> - Adicione a **MÚSICA**: **[${s[0].name}](${s[0].url})** na queue!`)).then(m => m.delete({ timeout: 20000 }));
             }
         })
     }
