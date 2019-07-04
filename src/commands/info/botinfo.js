@@ -34,13 +34,15 @@ module.exports = class BotInfo extends Command {
             <:postbox:512477373506256916> - Canais: **${client.channels.size}**
             <:settings:537012558289174529> - CPU usada: **${percent.toFixed(2)}%**
             <:ccloud:537349883242479616> - Ping: **${parseInt(new Date() - message.createdTimestamp)}**
+
             
             <a:dc:516402655661129729> - ***[Servidor de Suporte](https://discord.gg/kQE7t9v)***
             <:bot:543969729119780894> - ***[Meu Convite](https://discordapp.com/api/oauth2/authorize?client_id=595038256790372424&permissions=8&scope=bot)***
-            <:github:596119383407853578> - ***[GitHub]()***
-            <:monitor:543956399949086720> - ***[Site]()***\`(Desenvolvimento)\`
+            <:github:596119383407853578> - ***[GitHub](https://github.com/zSpl1nterUS/Aatron-Music)***
+            <:monitor:543956399949086720> - ***[Site]()*** \`(Desenvolvimento)\`
             
-            Caso encontre algum **BUG** contate meu desenvolvedor!`)
+            Caso encontre algum **BUG** contate meu desenvolvedor!
+            Open Source **Beicin-Music** usado no Bot **Aatron Music:** ***[Beicin](https://github.com/beicin/BeicinBot)*** - **Dono Do Beicin:** \`⚡ AvengerSuicide#0352\` `)
             .setThumbnail(client.user.displayAvatarURL)
             .setFooter(`💿 Aatron Music - 2019`, client.user.displayAvatarURL))   
         })

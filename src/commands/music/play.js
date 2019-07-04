@@ -5,7 +5,7 @@ module.exports = class Play extends Command {
     constructor(client) {
         super(client, {
             name: 'play',
-            aliases: ['tocar', 'p']
+            aliases: ['tocar', 'p', 'play']
         })
     }
 
@@ -73,7 +73,7 @@ module.exports = class Play extends Command {
         queue.on('queue', (s, u) => {
             if (s.length > 1) send(embed(u, `<:playl:538536887502110730> - Adicionei **${s.length}** **MÚSICAS** na queue!`));
             else {
-                send(embed(u, `<:playl:538536887502110730> - Adicione a **MÚSICA**: **[${s[0].name}](${s[0].url})** na queue!`)).then(m => m.delete({ timeout: 20000 }));
+                send(embed(u, `<:playl:538536887502110730> - Adicionei a **MÚSICA**: **[${s[0].name}](${s[0].url})** na queue!`)).then(m => m.delete({ timeout: 20000 }));
             }
         })
     }

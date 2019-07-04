@@ -1,4 +1,4 @@
-const { CommandContext } = require("../../");
+const { CommandContext, ClientEmbed } = require("../../");
 
 module.exports = class MessageEvent {
     constructor(client) {
@@ -6,7 +6,7 @@ module.exports = class MessageEvent {
         this.name = 'message'
     }
 
-    ON(message, { channel, guild, author } = message) {
+    ON(message, { channel, guild, author, client } = message) {
         const PREFIX = [this.client.prefix, `<@${this.client.user.id}>`, `<@!${this.client.user.id}>`];
         const verifyPrefix = PREFIX.find(prefix => message.content.startsWith(prefix));
 
@@ -30,6 +30,18 @@ module.exports = class MessageEvent {
 
                 return command.commandHelp._run(command, context);
             }
+        }
+
+        const embed = new ClientEmbed(author);
+
+        if (message.content.startsWith("<@595038256790372424>")) {
+
+            channel.send(embed
+                .setTitle(`<:contact:541103563217174539> - **${message.author.username}**, Central de **AJUDA**`)
+                .setDescription(`${message.author}, está precisando de ajuda para saber quais **COMANDOS** eu tenho?
+
+                <:question:596125631293685791> - É simples, ultilize o comando: **a.help** e lá você poderá ver a lista de todos os meus **COMANDOS**, muito interessante não acha?`)
+                .setFooter(`💿 Aatron Music - 2019`, client.user.displayAvatarURL))   
         }
     }
 }

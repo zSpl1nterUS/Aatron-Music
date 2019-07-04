@@ -4,7 +4,7 @@ module.exports = class Remove extends Command {
     constructor(client) {
         super(client, {
             name: 'remove',
-            aliases: ['tirar']
+            aliases: ['tirar', 'remover']
         })
     }
 
@@ -34,7 +34,7 @@ module.exports = class Remove extends Command {
                     ).then(() => guildQueue.removeOne(remove));
                 } else {
                     return channel.send(embed
-                        .setTitle(`<:error:538505640889417752> - Insira um número de músicas para eu remover! **[1 á ${guildQueue.songs.length}]**`)
+                        .setTitle(`<:error:538505640889417752> - Insira o número da música pra eu remover dê: **[1 á ${guildQueue.songs.length}]**`)
                         .setColor(process.env.ERR_COLOR)
                         .setFooter(`💿 Aatron Music - 2019`, message.client.user.displayAvatarURL)
                     )
