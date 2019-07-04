@@ -7,7 +7,8 @@
 <h1>Importante<h1>
   Como várias pessoas não fazem, por favor leia!
   Deixe os créditos ao usar a Open Source.
-  Deixe os créditos ao criador da Open Source usada aqui também caso queria ajudá-lo</blockquote>
+  
+  Se possível deixe os créditos ao criador da Open Source do Beicin</blockquote>
 
 
 ***Bot baseado no Beicin Music: [Open Source](https://github.com/beicin/BeicinBot)***
